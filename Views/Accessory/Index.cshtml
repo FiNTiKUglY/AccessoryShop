@@ -1,0 +1,50 @@
+﻿@using WEB_053505_Pronin.Entities
+@model ListViewModel<Accessory>
+
+@{
+	ViewData["Title"] = "Index";
+	int currentCategory = (int)ViewData["CurrentCategory"];
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+	<a asp-action="Create">Create New</a>
+</p>
+
+<div class="row">
+	<div class="col-2">
+		<div class="dropdown">
+			<a class="btn btn-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Все категории
+			</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				@{
+					<a asp-controller="Accessory" asp-action="Index" class="dropdown-item">Все категории</a>
+					foreach (var item in (List<AccessoryCategory>)ViewData["Categories"])
+					{
+						<a asp-controller="Accessory" 
+						   asp-action="Index" 
+						   asp-route-category="@item.Id"
+						   asp-route-pageNo="1"
+						   class="dropdown-item">
+						   @item.CategoryName
+						</a>
+					}
+				}
+			</div>
+		<pager	page-current="@Model.CurrentPage"
+				page-total="@Model.TotalPages"
+				action="Index"
+				controller="Accessory"
+				category-id="@currentCategory">
+		</pager>
+		</div>
+	</div>
+	<div class="card-deck col-10">
+		<div class="card-group" id="list">
+			<partial name="_ListPartial" model="@Model" />
+		</div>
+	</div>
+</div>

@@ -1,0 +1,65 @@
+﻿@page
+@model WEB_053505_Pronin.Areas.Admin.Pages.IndexModel
+@using Microsoft.AspNetCore.Identity
+@using WEB_053505_Pronin.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    if(User.IsInRole("admin")) {
+        <h1>Список</h1>
+
+        <p>
+            <a class="btn btn-outline-success" asp-page="Create" style="text-decoration: none">
+                <i class="icon-plus-sign"></i> Добавить
+            </a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Accessory[0].Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Accessory[0].Category)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Accessory)
+                {
+                    <tr>
+                        <td>
+                            <img src="~/images/@item.Image" width="70" height="70">
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category)
+                        </td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.Id" style="text-decoration: none; ">
+                                <i class="icon-edit" style="color:blue"></i>
+                            </a>
+                            |
+                            <a asp-page="./Delete" asp-route-id="@item.Id" style="text-decoration: none; ">
+                                <i class="icon-trash" style="color:red"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else {
+        <h1>Permisson denied</h1>
+    }
+}

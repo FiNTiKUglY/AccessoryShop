@@ -1,0 +1,3 @@
+2022-11-21 14:59:34.819 +03:00 [INF] Request / returns code 404
+2022-11-21 14:59:38.442 +03:00 [INF] Request / returns code 404
+2022-11-21 15:10:24.670 +03:00 [INF] Request / returns code 404

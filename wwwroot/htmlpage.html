@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="lib/bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+
+    <header>
+        <div class="navbar-dark">
+            <nav class="navbar navbar-expand-md" style="margin-left: 10%">
+                <a class="navbar-brand" href="#">05350131</a>
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Лб 1</a>
+                    <a class="nav-item nav-link" href="#">Каталог</a>
+                    <a class="nav-item nav-link" href="#">Администрирование</a>
+                </div>
+                <div class="dropdown ml-4 nav-color" align="right">
+                    <div class="dropdown-toggle" id="dropdownMenuButton"
+                         data-toggle="dropdown" aria-haspopup="true"
+                         aria-expanded="false">
+                        <img src="images/avatar.jpg" width="30"
+                             alt="User" class="rounded" />
+                    </div>
+                    <div class="dropdown-menu"
+                         aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-item-text">
+                            <img src="images/avatar.jpg" width="50"
+                                 alt="User" class="rounded" />
+                            user@mail.ru
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Мои товары</a>
+                        <a class="dropdown-item" href="#">Выйти</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-top:4%">Лабораторная работа 1</h1>
+
+        <div style="margin-top:4%">
+            <h2>Список</h2>
+            <ol type="A">
+                <li>элемент списка 1</li>
+                <li>элемент списка 2</li>
+            </ol>
+        </div>
+
+        <div style="margin-top:4%">
+            <h2>Форма</h2>
+            <form method="post">
+                <div style="margin-left:20%">
+                    <input type="checkbox" id="check1" name="check1">
+                    <label for="check1">Чек-бокс 1</label>
+                    <br />
+                    <input type="checkbox" id="check2" name="check2">
+                    <label for="check2">Чек-бокс 2</label>
+                </div>
+                <div style="margin-left:20%">
+                    <input type="radio" name="radio" id="radio1" value="1"><label for="radio1">Радио-1</label>
+                    <input type="radio" name="radio" id="radio2" value="2"><label for="radio2">Радио-2</label>
+                    <input type="radio" name="radio" id="radio3" value="3"><label for="radio3">Радио-3</label>
+                </div>
+                <div>
+                    <label>Логин:</label>
+                    <input name="login" type="text" size="80" placeholder="Введите имя" style="margin-left:15%">
+                    <br />
+                    <label>Пароль:</label>
+                    <input name="pass" type="text" size="80" placeholder="Введите пароль" style="margin-left:14%">
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="navbar navbar-expand-md fixed-bottom bg-dark">
+            <div class="navbar-nav ml-auto" style="margin-right:10%">
+                <a class="nav-item nav-link" href="http://www.facebook.com">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.vk.com">
+                    <i class="icon-vk"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.twitter.com">
+                    <i class="icon-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,6 @@
+2022-11-18 09:37:43.301 +03:00 [INF] Request /Cart/Add/3?returnurl=%2FCatalog returns code 302
+2022-11-18 09:37:43.620 +03:00 [INF] Request /Cart/Add/3?returnurl=%2FCatalog returns code 302
+2022-11-18 09:37:44.064 +03:00 [INF] Request /Cart/Add/3?returnurl=%2FCatalog returns code 302
+2022-11-18 09:37:44.296 +03:00 [INF] Request /Cart/Add/3?returnurl=%2FCatalog returns code 302
+2022-11-18 09:37:44.946 +03:00 [INF] Request /Cart/Add/3?returnurl=%2FCatalog returns code 302
+2022-11-18 09:37:46.955 +03:00 [INF] Request /Cart/ClearAll?returnUrl=%2FCart returns code 302

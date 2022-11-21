@@ -1,0 +1,30 @@
+﻿@using WEB_053505_Pronin.Models
+@using WEB_053505_Pronin.Entities
+@using Microsoft.AspNetCore.Identity
+@model IEnumerable<MenuItem>
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="navbar-nav">
+	@foreach (var item in Model)
+	{
+		@if (item.IsPage && User.IsInRole("admin"))
+		{
+			<a class="nav-item nav-link @item.Active"
+				asp-area="@item.Area"
+				asp-page="@item.Page">
+
+				@item.Text
+			</a>
+		}
+		else if (!item.IsPage)
+		{
+			<a class="nav-item nav-link @item.Active"
+				asp-controller="@item.Controller"
+				asp-action="@item.Action">
+
+				@item.Text
+			</a>
+		}
+	}
+</div>

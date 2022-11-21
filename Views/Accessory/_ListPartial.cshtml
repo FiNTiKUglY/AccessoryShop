@@ -1,0 +1,15 @@
+﻿@using WEB_053505_Pronin.Entities
+@model ListViewModel<Accessory>
+@{
+	for (int i = 0; i < 3; i++)
+	{
+		<div class="card">
+			@{
+			if (i < Model.Count)
+			{
+				<partial name="_ListItemPartial" model="@Model[i]" />
+			}
+			}
+		</div>
+	}
+}

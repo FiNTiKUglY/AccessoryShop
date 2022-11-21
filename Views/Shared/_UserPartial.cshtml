@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using WEB_053505_Pronin.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="ml-auto" style="display: flex; margin-right: 15%">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="navbar-text nav-item">
+            @await Component.InvokeAsync("CartComponent")
+        </div>
+        <div class="dropdown nav-color nav-item">
+            <div class="dropdown-toggle" id="dropdownMenuButton"
+             data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">
+                <img img-controller="Avatar" img-action="GetAvatar" width="30" alt="User" class="rounded" />
+            </div>
+            <div class="dropdown-menu"
+             aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-item-text">
+                    <img img-controller="Avatar" img-action="GetAvatar" width="50" alt="User" class="rounded" />
+                    @User.Identity.Name
+                </div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" asp-controller="Cart" asp-action="Index">Мои товары</a>
+                <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnurl="@ViewContext.HttpContext.Request.Path">
+                    <button class="dropdown-item">Выйти</button>
+                </form>
+            </div>
+        </div>
+    }
+    else 
+    {
+        <div class="nav-item">
+            <a class="nav-link navbar-text" asp-area="Identity" asp-page="/Account/Register">Регистрация</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link navbar-text" asp-area="Identity" asp-page="/Account/Login">Вход</a>
+        </div>
+    }
+</div>

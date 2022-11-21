@@ -1,0 +1,58 @@
+﻿@page "{id}"
+@model WEB_053505_Pronin.Areas.Admin.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Accessory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Accessory.Id" />
+            <div class="form-group">
+                <label asp-for="Accessory.Name" class="control-label"></label>
+                <input asp-for="Accessory.Name" class="form-control" />
+                <span asp-validation-for="Accessory.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accessory.Description" class="control-label"></label>
+                <input asp-for="Accessory.Description" class="form-control" />
+                <span asp-validation-for="Accessory.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accessory.Category" class="control-label"></label>
+                <input asp-for="Accessory.Category" class="form-control" />
+                <span asp-validation-for="Accessory.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accessory.CategoryId" class="control-label"></label>
+                <input asp-for="Accessory.CategoryId" class="form-control" />
+                <span asp-validation-for="Accessory.CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accessory.Cost" class="control-label"></label>
+                <input asp-for="Accessory.Cost" class="form-control" />
+                <span asp-validation-for="Accessory.Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accessory.Image" class="control-label"></label>
+                <input asp-for="Accessory.Image" class="form-control" />
+                <span asp-validation-for="Accessory.Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+

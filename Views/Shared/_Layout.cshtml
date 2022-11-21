@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WEB_053505_Pronin</title>
+    <link href="~/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/WEB_053505_Pronin.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="navbar-dark">
+            <nav class="navbar navbar-expand-md" style="margin-left: 10%">
+                <a asp-controller="Accessory" asp-action="Index" class="navbar-brand">Accessory Shop</a>
+
+                <div class="navbar-nav">
+                    @await Component.InvokeAsync("MenuComponent")
+                </div>
+
+                <partial name="_UserPartial.cshtml" />
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+        <div style="margin-bottom: 6%; visibility: hidden"></div>
+    </main>
+
+    <footer>
+        <div class="navbar navbar-expand-md bg-dark fixed-bottom">
+            <div class="navbar-nav ml-auto" style="margin-right:10%">
+                <a class="nav-item nav-link" href="http://www.facebook.com">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.vk.com">
+                    <i class="icon-vk"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.twitter.com">
+                    <i class="icon-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

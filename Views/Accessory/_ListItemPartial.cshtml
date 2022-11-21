@@ -1,0 +1,16 @@
+﻿@{
+	<img src="~/images/@Model.Image" class="card-img-top">
+	<div class="card-body">
+		<h5 class="card-title">@Model.Name</h5>
+		<p class="card-text">@Model.Description</p>
+		<p class="card-text">@Model.Cost BYN</p>
+		<a asp-action="Add"
+			asp-controller="Cart"
+			asp-route-id="@Model.Id"
+			asp-route-returnurl="@ViewContext.HttpContext.Request.Path"
+			class="btn btn-primary">
+				<i class="icon-shopping-cart"></i> В корзину
+		</a>
+	</div>
+}
+

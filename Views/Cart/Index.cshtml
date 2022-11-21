@@ -1,0 +1,49 @@
+﻿@model Cart
+
+<h1>Корзина</h1>
+<a asp-action="ClearAll"
+   asp-route-returnUrl="@ViewContext.HttpContext.Request.Path"
+   class="btn btn-outline-danger">
+   Очистить
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].Item.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Items[0].Count)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/@item.Value.Item.Image" width="70" height="70">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Value.Item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Value.Count)
+                </td>
+                <td>
+                    <a asp-controller="Cart" 
+                       asp-action="Remove" 
+                       asp-route-id="@item.Value.Item.Id"
+                       asp-route-returnUrl="@ViewContext.HttpContext.Request.Path"
+                       style="text-decoration: none; ">
+                        <i class="icon-trash" style="color:red"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

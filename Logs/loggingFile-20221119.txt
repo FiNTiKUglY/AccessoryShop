@@ -1,0 +1,30 @@
+2022-11-19 02:27:28.609 +03:00 [INF] User logged out.
+2022-11-19 02:27:28.644 +03:00 [INF] Request /Identity/Account/Logout?returnurl=%2F returns code 302
+2022-11-19 02:27:33.972 +03:00 [INF] User logged in.
+2022-11-19 02:27:33.977 +03:00 [INF] Request /Identity/Account/Login returns code 302
+2022-11-19 02:45:33.712 +03:00 [INF] User logged out.
+2022-11-19 02:45:33.751 +03:00 [INF] Request /Identity/Account/Logout?returnurl=%2F returns code 302
+2022-11-19 02:47:00.498 +03:00 [INF] User logged in.
+2022-11-19 02:47:00.531 +03:00 [INF] Request /Identity/Account/Login returns code 302
+2022-11-19 03:02:15.036 +03:00 [INF] Request /Admin/Delete/10 returns code 302
+2022-11-19 03:03:21.168 +03:00 [INF] Request /Admin/Create returns code 302
+2022-11-19 03:03:33.249 +03:00 [INF] Request /Admin/Create returns code 302
+2022-11-19 03:03:38.278 +03:00 [INF] Request /Admin/Delete/11 returns code 302
+2022-11-19 03:03:41.683 +03:00 [INF] Request /Admin/Delete/12 returns code 302
+2022-11-19 03:07:36.989 +03:00 [INF] Request /Admin/Create returns code 302
+2022-11-19 03:14:40.169 +03:00 [INF] Request /Admin/Create returns code 302
+2022-11-19 03:14:53.547 +03:00 [INF] Request /Admin/Delete/13 returns code 302
+2022-11-19 03:14:53.638 +03:00 [INF] Request /images/13.jpg returns code 404
+2022-11-19 03:14:55.823 +03:00 [INF] Request /images/13.jpg returns code 404
+2022-11-19 03:14:56.928 +03:00 [INF] Request /Admin/Delete/14 returns code 302
+2022-11-19 03:15:36.024 +03:00 [INF] User logged out.
+2022-11-19 03:15:36.025 +03:00 [INF] Request /Identity/Account/Logout?returnurl=%2F returns code 302
+2022-11-19 12:21:19.982 +03:00 [INF] User logged in.
+2022-11-19 12:21:20.140 +03:00 [INF] Request /Identity/Account/Login returns code 302
+2022-11-19 12:25:31.357 +03:00 [INF] Request /Admin/Create returns code 302
+2022-11-19 12:25:54.648 +03:00 [INF] Request /Admin/Edit/15 returns code 302
+2022-11-19 12:25:54.883 +03:00 [INF] Request /images/13.jpg returns code 404
+2022-11-19 12:25:57.587 +03:00 [INF] Request /images/13.jpg returns code 404
+2022-11-19 12:25:58.927 +03:00 [INF] Request /Admin/Delete/15 returns code 302
+2022-11-19 12:26:22.788 +03:00 [INF] Request /Admin/Create returns code 302
+2022-11-19 12:28:57.774 +03:00 [INF] Request /Admin/Delete/16 returns code 302
